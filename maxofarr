@@ -1,0 +1,13 @@
+a = [list(map(int, input().split())) for _ in range(9)]
+b = []
+max = -9999
+for i in range(9):
+  for j in range(9):
+    if a[i][j] >= max:
+      max = a[i][j]
+print(max)
+for i in range(9):
+  if max in a[i]:
+    b.append(i+1)
+    b.append(a[i].index(max)+1)
+print(b[0], b[1])
